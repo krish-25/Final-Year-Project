@@ -201,7 +201,6 @@ void setHeater(float qval) {
   analogWrite(pinQ, (Q*P)/100);
 }
 
-// arduino startup
 void setup() {
   analogReference(EXTERNAL);
   while (!Serial) {
@@ -213,7 +212,6 @@ void setup() {
   ledTimeout = millis() + 1000;
 }
 
-// arduino main event loop
 void loop() {
   readCommand();
   if (DEBUG) echoCommand();
